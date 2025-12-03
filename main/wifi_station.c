@@ -18,7 +18,7 @@
 
 #include "lwip/err.h"
 #include "lwip/sys.h"
-
+#include "mainapp.h"
 /* The examples use WiFi configuration that you can set via project configuration menu
 
    If you'd rather not, just change the below entries to strings with
@@ -158,7 +158,7 @@ void wifi_init_sta(void)
     }
 }
 
-void app_main(void)
+void ESP_WIFI_Task(void *P)
 {
     //Initialize NVS
     esp_err_t ret = nvs_flash_init();
