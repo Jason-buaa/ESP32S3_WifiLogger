@@ -176,4 +176,8 @@ void ESP_WIFI_Task(void *P)
 
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
+    while(1)
+    {
+        vTaskDelay(10000 / portTICK_PERIOD_MS);
+    }
 }
